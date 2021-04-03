@@ -1,0 +1,33 @@
+{
+    "name": "earc/data-default-setup",
+    "description": "eArc - the explicit architecture framework - default setup for the data component",
+    "type": "library",
+    "license": "MIT",
+    "version": "dev-0.0",
+    "authors": [
+        {
+            "name": "Thomas Koudela",
+            "email": "thomas@koudela.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
+    "require": {
+        "php": "^8.0",
+        "earc/data": "dev-master",
+        "earc/data-elasticsearch": "dev-master",
+        "earc/data-filesystem": "dev-master",
+        "earc/data-redis": "dev-master",
+        "earc/data-primary-key-generator": "dev-master"
+    },
+    "autoload": {
+        "psr-4" : {
+            "eArc\\DataDefaultSetup\\" : "src/",
+            "eArc\\DataDefaultSetupTests\\" : "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*",
+        "symfony/var-dumper": "*"
+    }
+}
