@@ -10,7 +10,6 @@
 
 namespace eArc\DataDefaultSetup;
 
-use BootstrapEArcData;
 use eArc\Data\ParameterInterface as DataParameter;
 use eArc\DataElasticsearch\ElasticsearchDataBridge;
 use eArc\DataFilesystem\FilesystemDataBridge;
@@ -23,7 +22,7 @@ abstract class Initializer
 {
     public static function init(): void
     {
-        BootstrapEArcData::init();
+        \eArc\Data\Initializer::init();
 
         di_set_param(PrimaryKeyGeneratorParameter::INFRASTRUCTURE, PrimaryKeyGenerator::USE_REDIS);
 
